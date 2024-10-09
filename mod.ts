@@ -316,17 +316,3 @@ async function main() {
 }
 
 main();
-export {
-  main,
-  getUserInput,
-  loginToDiscord,
-  setStatus,
-  sendMessage,
-  editMessage,
-  getChannelMessages,
-  getServerInfo,
-  getUserInfo,
-  getUserAvatar,
-  sendDM,
-  getUptime,
-};
