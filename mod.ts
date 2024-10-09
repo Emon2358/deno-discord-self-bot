@@ -1,4 +1,3 @@
-// deno-lint-ignore-file no-explicit-any no-unused-vars
 // 必要なパッケージをインポート
 import { readLines } from "https://deno.land/std@0.177.0/io/mod.ts";
 
@@ -113,6 +112,7 @@ async function editMessage(
 async function getChannelMessages(
   channelId: string,
   token: string
+  // deno-lint-ignore no-explicit-any
 ): Promise<any[]> {
   const response = await fetch(
     `https://discord.com/api/v9/channels/${channelId}/messages?limit=1`,
@@ -131,6 +131,7 @@ async function getChannelMessages(
 }
 
 // サーバー情報を取得する関数
+// deno-lint-ignore no-explicit-any
 async function getServerInfo(token: string, serverId: string): Promise<any> {
   const response = await fetch(
     `https://discord.com/api/v9/guilds/${serverId}?with_counts=true`,
@@ -151,6 +152,7 @@ async function getServerInfo(token: string, serverId: string): Promise<any> {
 }
 
 // ユーザー情報を取得する関数（バナー画像付き）
+// deno-lint-ignore no-explicit-any
 async function getUserInfo(token: string, userId: string): Promise<any> {
   const response = await fetch(`https://discord.com/api/v9/users/${userId}`, {
     headers: {
@@ -249,7 +251,11 @@ async function main() {
           const uptime = getUptime();
           await sendMessage(channelId, `Pong! 稼働時間: ${uptime}`, token);
         } else if (content === "!xlost") {
-          await sendMessage(channelId, "xlost は男の娘だからxlost は男の娘だから オナニーの時は ローター派？指派？ 天才ハッカーだかっらローター派？ローターの振動を最大に上げて 自分のまんこに入れて まんこにDDosしたら絶頂 潮吹きしたら オナニーに快感覚えたxLostは いろんなキメモノ混ぜ混ぜ 経血と愛液と潮 キメションアイスティー ローターにたっぷり染み込ませ ケツアナに入れて 絶頂ミラクル大痙攣 xLostは男の娘だから xLostは男の娘だから", token);
+          await sendMessage(
+            channelId,
+            "xlost は男の娘だからxlost は男の娘だから オナニーの時は ローター派？指派？ 天才ハッカーだかっらローター派？ローターの振動を最大に上げて 自分のまんこに入れて まんこにDDosしたら絶頂 潮吹きしたら オナニーに快感覚えたxLostは いろんなキメモノ混ぜ混ぜ 経血と愛液と潮 キメションアイスティー ローターにたっぷり染み込ませ ケツアナに入れて 絶頂ミラクル大痙攣 xLostは男の娘だから xLostは男の娘だから",
+            token
+          );
         } else if (content.startsWith("!server ")) {
           const serverId = content.slice(8);
           const serverInfo = await getServerInfo(token, serverId);
@@ -310,4 +316,17 @@ async function main() {
 }
 
 main();
-
+export {
+  main,
+  getUserInput,
+  loginToDiscord,
+  setStatus,
+  sendMessage,
+  editMessage,
+  getChannelMessages,
+  getServerInfo,
+  getUserInfo,
+  getUserAvatar,
+  sendDM,
+  getUptime,
+};
