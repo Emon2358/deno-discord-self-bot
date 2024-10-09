@@ -1,55 +1,65 @@
-# Discord deno selfBot
+# 🤖 多機能Discord Bot：便利なセルボ 🚀
 
-This Discord bot is a simple yet powerful tool designed to interact with Discord servers and channels. It's built using Deno and provides various functionalities such as server information retrieval, message sending, and status updates.
+## 🌟 はじめに
 
-## Features
+こんにちは！このDiscord Botは、あなたのサーバーをより楽しく、便利にする多機能ボットです。簡単な操作で様々な機能を使えます。さあ、一緒にDiscordライフをもっと豊かにしましょう！🎉
 
-- Login to Discord using email and password
-- Set bot status (online, idle, dnd, invisible)
-- Send messages to specified channels
-- Retrieve server information
-- Respond to various commands:
-  - `!ping`: Display uptime
-  - `!xlost`: Send a special message
-  - `!server <serverID>`: Display detailed server information
-  - `!say <message>`: Echo the given message
-  - `!help`: List available commands
+## 🔥 主な機能
 
-## Prerequisites
+### 1. 🔐 ログイン機能
+安全にDiscordにログインします。セキュリティも万全です。
 
-- [Deno](https://deno.land/) installed on your system
+### 2. 📡 ステータス設定
+ボットの状態を自由に設定できます。オンライン、退席中、取り込み中、オフラインから選べます。
 
-## Usage
+### 3. 💬 メッセージ送信
+チャンネルに自由にメッセージを送信できます。
 
-1. Clone this repository
-2. Run the script using Deno:
+### 4. ✏️ メッセージ編集
+送信したメッセージを後から編集できます。
 
-   ```
-   deno run --allow-net --allow-read --allow-env main.ts
-   ```
+### 5. 📜 チャンネルメッセージ取得
+チャンネルの最新メッセージを確認できます。
 
-3. When prompted, enter your Discord email, password, and the target channel ID
+### 6. 🏰 サーバー情報取得
+サーバーの詳細情報を取得できます。メンバー数やブーストレベルなどが分かります。
 
-## Commands
+### 7. 👤 ユーザー情報取得
+ユーザーの詳細情報を取得できます。アイコンやバナーの情報も含まれます。
 
-- `!ping`: Displays the bot's uptime
-- `!xlost`: Sends a predefined special message
-- `!server <serverID>`: Retrieves and displays detailed information about the specified server
-- `!say <message>`: Echoes the given message in the channel
-- `!help`: Lists all available commands
+### 8. 🖼️ アバター表示
+自分のアバター画像を表示できます。
 
-## Security Notice
+### 9. 📩 DM送信
+ユーザーにプライベートメッセージを送れます。
 
-This bot uses email and password for authentication, which is not recommended for production use. It's advisable to use bot tokens instead for enhanced security.
+### 10. ⏱️ 起動時間表示
+ボットの稼働時間を確認できます。
 
-## Disclaimer
+## 💥 コマンド一覧
 
-This bot is for educational purposes only. Be sure to comply with Discord's Terms of Service and API usage guidelines when using this bot.
+- `!ping`: ボットの応答確認と稼働時間を表示します。
+- `!xlost`: 特別なメッセージを送信します。
+- `!server [サーバーID]`: 指定したサーバーの情報を表示します。
+- `!user [ユーザーID]`: 指定したユーザーの情報を表示します。
+- `!say [メッセージ]`: ボットに指定したメッセージを発言させます。
+- `!edit [メッセージID] [新メッセージ]`: 既存のメッセージを編集します。
+- `!help`: 使用可能な全コマンドの一覧を表示します。
 
-## Contributing
+## 🚀 使い方
 
-Contributions, issues, and feature requests are welcome. Feel free to check issues page if you want to contribute.
+1. このコードをダウンロードします。
+2. Denoをインストールします。（https://deno.land/ からインストールできます）
+3. コマンドラインで `mod.ts` を実行します。
+4. 画面の指示に従って、メールアドレスとパスワードを入力します。
+5. 使用するチャンネルIDを入力すれば、準備完了です！
 
-## License
+## ⚠️ 注意事項
 
-[MIT](https://choosealicense.com/licenses/mit/)
+- このボットは非公式です。利用は自己責任でお願いします。
+- パスワードは絶対に他人に教えないでください。
+- 他人に迷惑をかけるような使い方は避けてください。
+
+## 🎉 おわりに
+
+このボットを使って、Discordでの活動がより楽しくなることを願っています。問題や質問がありましたら、お気軽にIssueを立ててください。一緒にDiscordを楽しみましょう！😊
