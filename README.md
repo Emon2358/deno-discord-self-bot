@@ -1,5 +1,5 @@
 # 🤖 多機能Discord Bot：便利なセルボ 🚀
-
+![be410b5afae65212028cfed71d50ad86 (1)](https://github.com/user-attachments/assets/e361414f-6ef1-4189-8ba6-e4afbc39006e)
 ## 🌟 はじめに
 
 こんにちは！このDiscord Botは、あなたのサーバーをより楽しく、便利にする多機能ボットです。簡単な操作で様々な機能を使えます。さあ、一緒にDiscordライフをもっと豊かにしましょう！🎉
